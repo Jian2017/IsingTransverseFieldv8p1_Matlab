@@ -19,3 +19,6 @@ get dynamical sturcture factors, set RR=1 for pure system,
 set RR=large number for disorder system
 SwkDisorder.m
 
+
+ATTENTION:
+IsingTransverseFieldv8p1 should include(addpath) all the file in folder IsingTransverseFieldv8
