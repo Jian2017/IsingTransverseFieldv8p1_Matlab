@@ -1,0 +1,35 @@
+function M=randomMatrix(L,R)
+
+% L is size
+% R is the sequence number of Random matrix
+% the random type need to be adjusted, by modifying the code manaully 
+
+rng(R);
+M=zeros(L);
+
+for i=1:L
+    M(i,i)=binaryR(0.2,3.0,0.4057);
+end
+
+for i=1:L-1
+    M(i,i+1)=-1;  % 0.45 binaryR(0.99,1.8,0.0); % 
+    % M(i,i+1)=-binaryR(0.99,3.0,0.0);  
+end
+
+
+
+    function outp=binaryR(hS,hL,pS)
+        if rand()<pS
+            outp=hS;
+        else
+            outp=hL;
+        end
+    end
+
+
+
+end
+    
+
+
+

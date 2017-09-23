@@ -1,0 +1,34 @@
+addpath('/home/jian/simulation/IsingTransverseFieldv8_Matlab');
+
+L=80;
+RR=30;
+
+dt=1;
+
+eigens=[];
+
+for R=1:RR
+
+    disp(R);
+    M=randomMatrix(L,R);
+   C = Cnt(M,ceil(L/4),ceil(L/2),dt,ceil(L/2)*2 );
+
+    
+end
+
+ 
+
+ 
+%%% stage two, generating Cnt(M,i,Nx,dt,Nt)
+
+
+%%% stage three, plot and FFT plot
+figure;
+imagesc(abs(C ));
+colorbar;
+title(['spin-spin correlation |< \sigma_{' num2str(ceil(L/4)) '}^x(t) \sigma_{' num2str(ceil(L/4)) '+r}^x(0)>|']);
+xlabel('space seperatation r, sites');
+ylabel('time t');
+set(gca,'Ydir','normal'); 
+
+colorPlot(C,dt);
