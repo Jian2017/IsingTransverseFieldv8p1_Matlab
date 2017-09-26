@@ -36,11 +36,6 @@ title( '<\sigma^x_{140} \sigma^x_m >'  );
 
  ssc2=zeros(41,1);
  for s=-20:20
-     ssc2(s+21)=Cijt(M,130,130+s,0);
+     ssc2(s+21)=Cijt(M,140,140+s,0);
  end
- 
- subplot(4,1,4);
-plot([110:150],ssc2,'.-');
-xlim([0 200]);
-title( '<\sigma^x_{110} \sigma^x_m >'  );
 
